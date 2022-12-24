@@ -4,7 +4,7 @@
 	min-height: inherit;
 	width: 205px;
 	float: left;
-	background: url("../images/bg-aside-title.png") no-repeat;
+	
 }
 
 .aside .margin-top{
@@ -72,7 +72,7 @@
 	font-size: 12px;
 	font-weight: bold;
 	text-shadow: 0.5px 0.5px 1px #000000;
-	background: url(../images/bg-aside-sub-title.png) no-repeat 0px 0px;
+	
 }
 
 .aside .menu.text-menu.first ul,

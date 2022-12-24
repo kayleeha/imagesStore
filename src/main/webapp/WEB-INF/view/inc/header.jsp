@@ -7,7 +7,7 @@
 
             <h1 id="logo">
                 <a href="/index.html">
-                    <img src="/images/logo.png" alt="뉴렉처 온라인" />
+                    <img src="/images/logo.jpg" alt="imagesStore logo" />
 
                 </a>
             </h1>
@@ -18,10 +18,10 @@
                 <nav id="main-menu">
                     <h1>메인메뉴</h1>
                     <ul>
-                        <li><a href="/guide">학습가이드</a></li>
+                        <li><a href="/guide">둘러보기</a></li>
 
-                        <li><a href="/course">강좌선택</a></li>
-                        <li><a href="/answeris/index">AnswerIs</a></li>
+                        <li><a href="/select">상품</a></li>
+                        <li><a href="/qna">Q&A</a></li>
                     </ul>
                 </nav>
 
