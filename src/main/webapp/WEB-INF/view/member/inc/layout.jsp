@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <title><tiles:getAsString name="title" /></title>
     
-    <link href="/css/customer/layout.css" type="text/css" rel="stylesheet" />
+    <link href="/css/member/layout.css" type="text/css" rel="stylesheet" />
     <style>
     
         #visual .content-container{	

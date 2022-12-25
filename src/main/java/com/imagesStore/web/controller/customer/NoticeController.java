@@ -32,4 +32,10 @@ public class NoticeController {
 		
 		return "notice.detail";
 	}
+	
+	@RequestMapping("reg")
+	public String reg() {
+		
+		return "notice.reg";
+	}
 }

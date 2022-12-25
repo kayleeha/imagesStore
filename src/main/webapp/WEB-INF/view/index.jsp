@@ -15,7 +15,7 @@
 
 
 
-            <ul class="banner-button-list" style="color:#ffff00; font-size:20px;position:absolute; left:10px; bottom:5px; z-index: 100px; display: flex; flex-direction: row;">
+            <ul class="banner-button-list" >
                 <li></li>
             </ul>
 
@@ -33,9 +33,9 @@
     <div id="information">
         <div class="content-container">
             <section class="guide">
-                <h1 class="title">강의 플레이어 사용방법 안내</h1>
+                <h1 class="title"></h1>
                 <div class="margin-top">
-                    <a href="customer/faq/1"><img src="images/customer/installInfo.png" /></a>
+                    <a href="customer/faq/1"></a>
                 </div>
                 <!-- <div>
             2
@@ -45,9 +45,9 @@
             </div> -->
             </section>
             <section class="course-info">
-                <h1 class="title text-center">뉴렉처 하이브리드 과정 모집</h1>
+                <h1 class="title text-center"></h1>
                 <ul class="list">
-                    <li>현재 모집 과정이 없습니다.</li>
+                    <li></li>
                 </ul>
             </section>
             <section class="notice">
@@ -80,7 +80,7 @@
 
     <main id="course">
         <section class="content-container list list-horizontal list-course list-course-index">
-            <h1>온라인 <span class="color-orange">단과 과정</span></h1>
+            <h1> <span class="color-orange"></span></h1>
             <div>
                
             </div>

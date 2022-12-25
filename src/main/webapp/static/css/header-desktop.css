@@ -127,10 +127,10 @@
 		height: inherit;
 	}
 	#header .content-container .logo {
-		display: inline-block;
-		position: absolute;
+		
+		position: relative;
 		left: 0px;
-		top: 23px;
+		top: 0px;
 	}
 	#header .content-container .main-menu {
 		
