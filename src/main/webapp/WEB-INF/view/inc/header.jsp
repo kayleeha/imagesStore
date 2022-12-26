@@ -6,8 +6,8 @@
             <!-- ---------------------------<header>--------------------------------------- -->
 
             <h1 id="logo">
-                <a href="/index.html">
-                    <img src="/images/logo.jpg" alt="imagesStore logo" />
+                <a href="/index">
+                    <img src="/images/logo.jpg" width=190 alt="imagesStore logo" />
 
                 </a>
             </h1>
@@ -42,9 +42,9 @@
                     <nav id="acount-menu">
                         <h1 class="hidden">회원메뉴</h1>
                         <ul>
-                            <li><a href="/index.html">HOME</a></li>
-                            <li><a href="/member/login.html">로그인</a></li>
-                            <li><a href="/member/agree.html">회원가입</a></li>
+                            <li><a href="/index">HOME</a></li>
+                            <li><a href="/member/login/login">로그인</a></li>
+                            <li><a href="/member/join/agree">회원가입</a></li>
                         </ul>
                     </nav>
 

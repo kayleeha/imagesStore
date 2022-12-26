@@ -11,9 +11,15 @@
 			<li class="prev-button">이전</li>
 			<li class="next-button">다음</li>
 		</ul> -->
+		
+		 <div class="banner">
 
-
-
+			<img src="../images/1.jpg" width=235>
+			<img src="../images/star.jpg" width=235 height=155>
+			<img src="../images/2.jpg" width=235>
+			<img src="../images/dog.jpg" width=235 height=155>
+		</div>
+		
 
             <ul class="banner-button-list" >
                 <li></li>

@@ -14,26 +14,15 @@ import com.imagesStore.web.entity.Notice;
 import com.imagesStore.web.service.NoticeService;
 
 @Controller
-@RequestMapping("/member/join/")
-public class JoinController {
+@RequestMapping("/member/login/")
+public class LoginController {
 
 	
 	
-	@RequestMapping("agree")
-	public String agree() {
+	@RequestMapping("login")
+	public String login() {
 		
-		return "member.agree";
+		return "member.login";
 	}
-	@RequestMapping("join")
-	public String join() {
-		
-		return "member.join";
-	}
-	@RequestMapping("confirm")
-	public String confirm() {
-		
-		return "member.confirm";
-	}
-
-
+	
 }

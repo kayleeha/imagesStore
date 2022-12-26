@@ -2,7 +2,7 @@
 
 #visual{	
 	/* padding-top:50px; */
-	height: 150px;
+	height: 160px;
 	background: #313131;
 	
 	/* overflow: hidden; */	
@@ -22,13 +22,18 @@
 	transition-duration: 1s;
 }
 
-#visual .banner li{	
-	position:absolute;
-	top:0px;
-	
-	height: inherit;
-	width:100%;
-}
+#visual .banner	div {
+				margin:20px;
+				border:1px solid #ccc;
+				border-radius:5px;
+			}
+			#inline img {
+				margin:10px;
+			}
+			#block img {
+				display:block;
+				margin:10px;
+			}
 
 #visual .mov-button{
 	position: absolute;
