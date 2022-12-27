@@ -14,7 +14,7 @@ import com.imagesStore.web.entity.Notice;
 import com.imagesStore.web.service.NoticeService;
 
 @Controller
-@RequestMapping("/member/join/")
+@RequestMapping("/member/")
 public class JoinController {
 
 	
@@ -23,6 +23,12 @@ public class JoinController {
 	public String agree() {
 		
 		return "member.agree";
+	}
+	
+	@RequestMapping("login")
+	public String login() {
+		
+		return "member.login";
 	}
 	@RequestMapping("join")
 	public String join() {

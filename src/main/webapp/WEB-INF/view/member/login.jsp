@@ -19,7 +19,7 @@
                         <fieldset>
                             <legend class="hidden">로그인 폼</legend>
                             <h4>
-                                <img src="../images/member/txt-title.png" />
+                                <img src="../images/member/text-title.png" width=300 />
                             </h4>
                             <ul class="login-box">
                                 <li>

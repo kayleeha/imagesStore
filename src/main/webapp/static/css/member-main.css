@@ -483,9 +483,7 @@ main .tools{
 
 
 /* === Main Component ===================================================== */
-main img{
-	vertical-align: middle;
-}
+
 
 main .login-form{
 	/* border:1px solid #c0c0c0; */
@@ -494,8 +492,7 @@ main .login-form{
     height: 247px;    
     
     margin:auto;	
-    
-    background: url("../../images/member/bg-login-box.png") no-repeat 0px 0px;
+ 
     
     box-sizing:border-box;
     padding:19px 28px;
@@ -506,10 +503,10 @@ main .login-form{
 }
 
 main .login-box{
-	margin-top:35px;
+	margin-top:25px;
 	margin-right:140px;		
 	 	
-	text-align: right;
+	text-align: middle;
 }
 
 main .login-box input[type="text"],
@@ -531,7 +528,7 @@ main .login-btn-box{
 main .login-btn{
     width: 83px;
     height: 53px;
-    background: url("../../images/member/btn-login.png") no-repeat 0px 0px;    
+    background: url("../images/member/btn-login.png") no-repeat 0px 0px;    
     overflow: hidden;
     
     -webkit-appearance: button;

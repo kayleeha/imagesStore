@@ -13,7 +13,7 @@
 	
 		<div class="bg-light-gray border-gray padding" style="">
         <div class="padding font-size-13 text-strong">
-            	뉴렉쳐의 <span class="text-orange">개인정보 수집 및 이용</span>에 대한 안내입니다. 불편하신 사항이 없으시도록 꼭 읽어주시기 바랍니다.
+            	imagesStore의 <span class="text-orange">개인정보 수집 및 이용</span>에 대한 안내입니다. <br>불편하신 사항이 없으시도록 꼭 읽어주시기 바랍니다.
         </div>
         <div class="agree-content">
             <textarea style="width:100%;height: 300px">[ 이용약관 제1장 - 총칙 ]
