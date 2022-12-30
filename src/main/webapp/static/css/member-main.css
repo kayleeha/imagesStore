@@ -486,7 +486,7 @@ main .tools{
 
 
 main .login-form{
-	/* border:1px solid #c0c0c0; */
+	 border:1px solid #c0c0c0; 
 	border-radius:5px;
 	width: 624px;
     height: 247px;    

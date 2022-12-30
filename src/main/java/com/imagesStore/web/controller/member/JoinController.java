@@ -30,16 +30,29 @@ public class JoinController {
 		
 		return "member.login";
 	}
+	
 	@RequestMapping("join")
 	public String join() {
 		
 		return "member.join";
 	}
+	
 	@RequestMapping("confirm")
 	public String confirm() {
 		
 		return "member.confirm";
 	}
+	
+	@RequestMapping("home")
+	public String home() {
+		
+		return "member.home";
+	}
 
+	@RequestMapping("find_id")
+	public String find_id() {
+		
+		return "member.find_id";
+	}
 
 }
