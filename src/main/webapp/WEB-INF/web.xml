@@ -16,11 +16,7 @@
 		/WEB-INF/spring/security-context.xml
 	</param-value>
 </context-param>
-<!-- The definition of the Root Spring Container shared by all Servlets and Filters -->
-	<context-param>
-		<param-name>contextConfigLocation</param-name>
-		<param-value>/WEB-INF/spring/mybatis-context.xml</param-value>
-	</context-param>
+
 <servlet>
 	<servlet-name>dispatcher</servlet-name>
 	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>

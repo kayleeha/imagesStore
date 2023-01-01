@@ -14,7 +14,7 @@ import com.imagesStore.web.entity.Notice;
 import com.imagesStore.web.service.NoticeService;
 
 @Controller
-@RequestMapping("/customer/notice/")
+@RequestMapping("customer/notice/")
 public class NoticeController {
 
 	@Autowired
@@ -38,4 +38,6 @@ public class NoticeController {
 		
 		return "notice.reg";
 	}
+	
+
 }

@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 	 <!-- content 부분 -->
 
 
@@ -57,14 +60,14 @@
                 </ul>
             </section>
             <section class="notice">
-                <h1 class="title">공지사항</h1>
+                <h1 class="title"><a href="customer/notice/list"/>공지사항</h1>
                 <ul class="list margin-top">
 
                     <li>
                         <span class="notice-title">
-                            <a href="notice/detail.html">스프링 8강까지의 예제 코드</a>
+                            <a href="notice/detail">${n.title}</a>
                         </span>
-                        <span>2019-08-18</span>
+                        <span><fmt:formatDate pattern="yy-MM-dd hh:mm:ss" value="${n.regDate}"/> </span>
                     </li>
 
                    

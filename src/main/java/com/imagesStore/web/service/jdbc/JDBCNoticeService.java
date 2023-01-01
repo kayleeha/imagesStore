@@ -105,7 +105,7 @@ public class JDBCNoticeService implements NoticeService {
 		String content = notice.getContent();
 		String files = notice.getFiles();
 		
-		String url = "jdbc:oracle:thin:@localhost:1521/xepdb1";
+		String url = "jdbc:oracle:thin:@localhost:1521/xe";
 		String sql = "INSERT INTO notice (    " + 
 				"    title," + 
 				"    writer_id," + 
@@ -139,7 +139,7 @@ public class JDBCNoticeService implements NoticeService {
 		String files = notice.getFiles();
 		int id = notice.getId();
 		
-		String url = "jdbc:oracle:thin:@localhost:1521/xepdb1";
+		String url = "jdbc:oracle:thin:@localhost:1521/xe";
 		String sql = "UPDATE NOTICE " + 
 				"SET" + 
 				"    TITLE=?," + 
@@ -168,7 +168,7 @@ public class JDBCNoticeService implements NoticeService {
 	
 	public int delete(int id) throws ClassNotFoundException, SQLException {
 	
-		String url = "jdbc:oracle:thin:@localhost:1521/xepdb1";
+		String url = "jdbc:oracle:thin:@localhost:1521/xe";
 		String sql = "DELETE NOTICE WHERE ID=?";
 		
 //		Class.forName(driver);

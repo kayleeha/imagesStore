@@ -1,17 +1,7 @@
 package com.imagesStore.web.controller.member;
 
-import java.sql.SQLException;
-import java.util.List;
-
-import javax.swing.Spring;
-
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-
-import com.imagesStore.web.entity.Notice;
-import com.imagesStore.web.service.NoticeService;
 
 @Controller
 @RequestMapping("/member/")
@@ -55,4 +45,9 @@ public class JoinController {
 		return "member.find_id";
 	}
 
+	@RequestMapping("reissue")
+	public String reissue() {
+		
+		return "member.reissue";
+	}
 }
