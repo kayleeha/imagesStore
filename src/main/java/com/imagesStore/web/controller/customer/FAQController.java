@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("customer/faq/")
 public class FAQController {
 
-	@RequestMapping("faq")
-	public String faq() {
+	@RequestMapping("list")
+	public String list() {
 		
-		return "customer.faq";
+		return "customer.list";
 	}
 }

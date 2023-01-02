@@ -1,37 +1,37 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-	<main class="main">
-			<h2 class="main title">자주하는 질문</h2>
+
+		<main class="main">
+			<h2 class="main title">이벤트</h2>
 			
 			<div class="breadcrumb">
 				<h3 class="hidden">경로</h3>
 				<ul>
 					<li>home</li>
 					<li>고객센터</li>
-					<li>공지사항</li>
+					<li>이벤트</li>
 				</ul>
 			</div>
 			
 			<div class="search-form margin-top first align-right">
-				<h3 class="hidden">자주하는 질문</h3>
+				<h3 class="hidden">이벤트 검색폼</h3>
 				<form class="table-form">
 					<fieldset>
-						<legend class="hidden">FAQ 검색 필드</legend>
+						<legend class="hidden">이벤트 검색 필드</legend>
 						<label class="hidden">검색분류</label>
 						<select name="f">
 							<option  value="title">제목</option>
 							<option  value="writerId">작성자</option>
 						</select> 
-						<label class="hidden">검색어</label>
-						<input type="text" name="q" value=""/>
+						<label class="hidden">검색어</label> 
+						<input type="text" name="q" value=""/> 
 						<input class="btn btn-search" type="submit" value="검색" />
 					</fieldset>
 				</form>
 			</div>
-			
+						
 			<div class="notice margin-top">
-				<h3 class="hidden">FAQ 목록</h3>
+				<h3 class="hidden">이벤트 목록</h3>
 				<table class="table">
 					<thead>
 						<tr>
@@ -43,18 +43,17 @@
 						</tr>
 					</thead>
 					<tbody>
-							
-					<c:forEach var="n" items="${list}">
+										
 					<tr>
-						<td>${n.id}</td>
-						<td class="title indent text-align-left"><a href="detail">${n.title}</a></td>
-						<td>${n.writerId}</td>
+						<td>1</td>
+						<td class="title indent text-align-left"><a href="1">[편하게 읽는 자바 프로그래밍] 도서 구매 이벤트</a></td>
+						<td>newlec</td>
 						<td>
-							${n.regDate}		
+							2018-02-02		
 						</td>
-						<td>${n.hit}</td>
+						<td>5843</td>
 					</tr>
-					</c:forEach>
+					
 					
 					</tbody>
 				</table>
@@ -65,8 +64,20 @@
 				<div><span class="text-orange text-strong">1</span> / 1 pages</div>
 			</div>
 
-			<div class="margin-top align-center pager">	
-		
+			<div class="margin-top align-center pager">
+				
+
+
+
+	
+			
+	
+	
+	
+	
+	
+	
+	
 	<div>
 		
 		
@@ -74,8 +85,23 @@
 		
 	</div>
 	<ul class="-list- center">
-		<li><a class="-text- orange bold" href="?p=1&t=&q=" >1</a></li>
+		
+			
 				
+					<li><a class="-text- orange bold" href="?p=1&t=&q=" >1</a></li>
+				
+								
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+		
 	</ul>
 	<div>
 		
@@ -87,5 +113,4 @@
 			</div>
 		</main>
 		
-</body>
-</html>
+	

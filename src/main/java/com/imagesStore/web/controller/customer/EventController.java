@@ -9,10 +9,10 @@ public class EventController {
 
 	
 	
-	@RequestMapping("event")
-	public String event() {
+	@RequestMapping("list")
+	public String list() {
 		
-		return "customer.event";
+		return "customer.list";
 	}
 	
 
