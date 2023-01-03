@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 		<main class="main">
 			<h2 class="main title">이벤트</h2>
@@ -44,15 +45,17 @@
 					</thead>
 					<tbody>
 										
+					<c:forEach var="n" items="${list}">
 					<tr>
-						<td>1</td>
-						<td class="title indent text-align-left"><a href="1">[편하게 읽는 자바 프로그래밍] 도서 구매 이벤트</a></td>
-						<td>newlec</td>
+						<td>${n.id}</td>
+						<td class="title indent text-align-left"><a href="detail">${n.title}</a></td>
+						<td>${n.writerId}</td>
 						<td>
-							2018-02-02		
+							${n.regDate}		
 						</td>
-						<td>5843</td>
+						<td>${n.hit}</td>
 					</tr>
+					</c:forEach>
 					
 					
 					</tbody>

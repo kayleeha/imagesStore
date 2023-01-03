@@ -25,7 +25,7 @@
         </div>
     </div>	
 		
-		<form action="agree" method="post" class="margin-top">
+		<form action="join" method="post" class="margin-top">
 			<div>
 				<input type="checkbox" name="agree" value="true" /> 약관에 동의합니다.
 			</div>
