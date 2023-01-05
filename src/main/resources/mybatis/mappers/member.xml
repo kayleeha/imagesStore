@@ -8,8 +8,11 @@
 		<result property="id" column="id" />
         <result property="pwd" column="pwd" />
         <result property="name" column="name" />
-        <result property="email" column="email" />
-        <result property="joinDate" column="joinDate" />
+		<result property="gender" column="gender" />
+        <result property="age" column="age" />
+        <result property="birthday" column="birthday" />        
+        <result property="phone" column="phone" />
+        <result property="regDate" column="regDate" />
 	</resultMap> 
 	<!-- 
 	<resultMap id="memResult" type="java.util.HashMap">
@@ -23,22 +26,22 @@
 
 	<select id="selectAllMemberList" resultMap="memResult">
       <![CDATA[
-         select * from t_member	order by joinDate desc	 	
+         select * from member order by regDate desc	 	
       ]]>
 	</select>
     
      <insert id="insertMember"  parameterType="memberVO">
 		<![CDATA[
-		 insert into t_member(id,pwd, name, email)
-		 values(#{id}, #{pwd}, #{name}, #{email})
+		 insert into member(id,pwd, name, gender, age, birthday, phone)
+		 values(#{id}, #{pwd}, #{name}, #{gender}, #{age}, #{birthday}, #{phone})
 		]]>      
 	</insert>
 	
    
    <update id="updateMember"  parameterType="memberVO">
      <![CDATA[
-	     update t_member
-	     set pwd=#{pwd}, name=#{name}, email=#{email}
+	     update member
+	     set pwd=#{pwd}, name=#{name}, #{gender}, #{age}, #{birthday}, phone=#{phone}
 	     where
 	     id=#{id}
       ]]>      
@@ -46,14 +49,14 @@
      
    <delete id="deleteMember"  parameterType="String">
 	<![CDATA[
-	   delete from  t_member
+	   delete from member
 	   where
 	   id=#{id}
 	]]>      
   </delete>
   <select id="loginById"  resultType="memberVO"   parameterType="memberVO" >
 	<![CDATA[
-		select * from t_member	
+		select * from member	
 		where id=#{id} and pwd=#{pwd}		
 	]]>
   </select>
