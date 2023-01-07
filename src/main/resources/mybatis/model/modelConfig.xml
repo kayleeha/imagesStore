@@ -4,6 +4,19 @@
 
 <configuration>
 	<typeAliases>
-		<typeAlias type="com.imagesStore.web.member.vo.MemberVO"  alias="memberVO" />
+		<typeAlias type="com.imagesStore.web.member.vo.MemberVO"
+			alias="memberVO" />
+		<typeAlias type="com.imagesStore.web.goods.vo.GoodsVO"
+			alias="goodsVO" />
+		<typeAlias type="com.imagesStore.web.goods.vo.ImageFileVO"
+			alias="imageFileVO" />
+		<typeAlias type="com.imagesStore.web.member.vo.MemberVO"
+			alias="memberVO" />
+		<typeAlias type="com.imagesStore.web.cart.vo.CartVO"
+			alias="cartVO" />
+		<typeAlias type="com.imagesStore.web.order.vo.OrderVO"
+			alias="orderVO" />
+		<typeAlias type="com.imagesStore.web.mypage.vo.MyPageVO"
+			alias="mypageVO" />
 	</typeAliases>
 </configuration>

@@ -21,11 +21,14 @@
 		<property name="order" value="1" /> <!-- 우선순위를 InternalResourceViewResolver보다 높게 설정 -->
 	</bean>
 
-	<bean
-		class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
-		<property name="definitions" value="/WEB-INF/tiles.xml" />
-	</bean>
 
+	<bean class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+				<property name="definitions">
+					<list>
+						<value>/WEB-INF/tiles.xml</value>
+					</list>
+				</property>
+			</bean>
 
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -33,7 +36,7 @@
 		<property name="suffix" value=".jsp"></property>
 		<property name="order" value="2" />
 	</bean>
-	<mvc:resources location="/resources/**" mapping="/resources/"></mvc:resources>
+	<mvc:resources location="/static/" mapping="/**"></mvc:resources>
 	<mvc:annotation-driven >
 		<mvc:message-converters> <!-- ResponseBody로 String 처리할 때 한글 인코딩이 똑바로 될 수 있도록 -->
 			<bean class="org.springframework.http.converter.StringHttpMessageConverter">
