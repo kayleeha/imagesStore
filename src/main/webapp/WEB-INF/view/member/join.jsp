@@ -95,68 +95,21 @@
 		var idChecked = false;
 			
 		var form = document.querySelector("#form1");
-		var photo = document.querySelector("#photo");
-		var photoFileButton = document.querySelector("#photo-file-button");
-		var photoButton = document.querySelector("#photo-button");
 		var idTextBox = document.querySelector("#id-text");
 		var idCheckButton = document.querySelector("#id-check-button");
 		var pwdTextBox = document.querySelector("form input[name='pwd']");
 		var pwd2TextBox = document.querySelector("form input[name='pwd2']");		
 		var genderSelect = document.querySelector("form select[name='gender']");
 		
-		photoButton.onclick = function(e){
-			var event = new MouseEvent("click", {
-		        'view': window,
-		        'bubbles': true,
-		        'cancelable': true
-		    });
-						
-			photoFileButton.dispatchEvent(event);
-		};
-		
-		photoFileButton.onchange = function(e){
-			
-			var countSelected = photoFileButton.files.length;
-			if(countSelected == 0){
-				alert("파일을 선택해주세요.");
-				return;
-			}
-			
-			var file = photoFileButton.files[0];
-			
-			var size = file.size;
-			if(size > 10*1024*1024){
-				alert("죄송합니다. 10MB를 넘는 파일은 전송할 수 없습니다.");
-				return;
-			}
-			
-			// 파일의 MIME 형식이 "image/"로 시작되지 않으면 오류 출력
-			if(file.type.indexOf("image/") != 0){
-				alert("이미지 형식이 아닙니다.");
-				return;
-			}
-			
-			/* ============================================ */
-			var reader = new FileReader();
-	        reader.onload = function (evt) {
-	            photo.src = evt.target.result;
-	        }
-			//--- 로컬파일 읽기 요청-------------------------
-	        reader.readAsDataURL(file);
-			/* ============================================ */
-			
-		}
-		
-		pwd2TextBox.oninput = function(e){
-			console.log(pwdTextBox.value + "/" + pwd2TextBox.value);
-			if (pwdTextBox.value != pwd2TextBox.value) {
-				pwd2TextBox.setCustomValidity("비밀번호가 일치하지 않습니다.");
-			} else {
-				pwd2TextBox.setCustomValidity('');
+
+		form.onsubmit = function(e){			
+			if(!idChecked){
+				//idTextBox.setCustomValidity("아이디 중복을 확인하세요.");
+				alert("아이디 중복확인을 확인하세요.");
+				e.preventDefault();
 			}
 		};
-				
-		
+	
 		idTextBox.onchange = function(e){
 			if(idChecked){
 				alert("아이디가 변경되었습니다.\r\n아이디 중복 검사를 다시해야 합니다.");
@@ -186,13 +139,18 @@
 						
 		}
 		
-		form.onsubmit = function(e){			
-			if(!idChecked){
-				//idTextBox.setCustomValidity("아이디 중복을 확인하세요.");
-				alert("아이디 중복확인을 확인하세요.");
-				e.preventDefault();
+		
+		pwd2TextBox.oninput = function(e){
+			console.log(pwdTextBox.value + "/" + pwd2TextBox.value);
+			if (pwdTextBox.value != pwd2TextBox.value) {
+				pwd2TextBox.setCustomValidity("비밀번호가 일치하지 않습니다.");
+			} else {
+				pwd2TextBox.setCustomValidity('');
 			}
 		};
+				
+		
+		
 		
 		/* submitButton.onclick = function(e){
 			alert(genderSelect.value);
@@ -206,5 +164,4 @@
 		
 	});
 	</script>
-			
 		

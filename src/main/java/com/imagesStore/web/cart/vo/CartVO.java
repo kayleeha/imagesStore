@@ -8,9 +8,18 @@ public class CartVO {
 	private int goods_id;
 	private String member_id;
 	private int cart_goods_qty;
-	private String creDate;
+
 	
+	public CartVO() {
+		// TODO Auto-generated constructor stub
+	}
 	
+	public CartVO(int cart_id, int goods_id, String member_id, int cart_goods_qty) {
+		this.cart_id = cart_id;
+		this.goods_id = goods_id;
+		this.member_id = member_id;
+		this.cart_goods_qty = cart_goods_qty;
+	}
 	public int getCart_id() {
 		return cart_id;
 	}
@@ -39,14 +48,7 @@ public class CartVO {
 	public void setCart_goods_qty(int cart_goods_qty) {
 		this.cart_goods_qty = cart_goods_qty;
 	}
-	public String getCreDate() {
-		return creDate;
-	}
-	public void setCreDate(String creDate) {
-		this.creDate = creDate;
-	}
-	
-	
+
 	
 
 }

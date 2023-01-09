@@ -36,7 +36,7 @@ public class CartControllerImpl extends BaseController implements CartController
 		ModelAndView mav = new ModelAndView(viewName);
 		HttpSession session=request.getSession();
 		MemberVO memberVO=(MemberVO)session.getAttribute("memberInfo");
-		String member_id=memberVO.getId();
+		String member_id=memberVO.getMember_id();
 		cartVO.setMember_id(member_id);
 		Map<String ,List> cartMap=cartService.myCartList(cartVO);
 		session.setAttribute("cartMap", cartMap);//��ٱ��� ��� ȭ�鿡�� ��ǰ �ֹ� �� ����ϱ� ���ؼ� ��ٱ��� ����� ���ǿ� �����Ѵ�.
@@ -48,7 +48,7 @@ public class CartControllerImpl extends BaseController implements CartController
 			                    HttpServletRequest request, HttpServletResponse response)  throws Exception{
 		HttpSession session=request.getSession();
 		memberVO=(MemberVO)session.getAttribute("memberInfo");
-		String member_id=memberVO.getId();
+		String member_id=memberVO.getMember_id();
 		
 		cartVO.setMember_id(member_id);
 		//īƮ ������� �̹� ��ϵ� ��ǰ���� �Ǻ��Ѵ�.
@@ -70,7 +70,7 @@ public class CartControllerImpl extends BaseController implements CartController
 			                                    HttpServletRequest request, HttpServletResponse response)  throws Exception{
 		HttpSession session=request.getSession();
 		memberVO=(MemberVO)session.getAttribute("memberInfo");
-		String member_id=memberVO.getId();
+		String member_id=memberVO.getMember_id();
 		cartVO.setGoods_id(goods_id);
 		cartVO.setMember_id(member_id);
 		cartVO.setCart_goods_qty(cart_goods_qty);

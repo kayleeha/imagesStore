@@ -43,7 +43,7 @@ public class MyPageControllerImpl extends BaseController  implements MyPageContr
 		String viewName=(String)request.getAttribute("viewName");
 		ModelAndView mav = new ModelAndView(viewName);
 		memberVO=(MemberVO)session.getAttribute("memberInfo");
-		String member_id=memberVO.getId();
+		String member_id=memberVO.getMember_id();
 		
 		List<OrderVO> myOrderList=myPageService.listMyOrderGoods(member_id);
 		
@@ -75,7 +75,7 @@ public class MyPageControllerImpl extends BaseController  implements MyPageContr
 		ModelAndView mav = new ModelAndView(viewName);
 		HttpSession session=request.getSession();
 		memberVO=(MemberVO)session.getAttribute("memberInfo");
-		String  member_id=memberVO.getId();
+		String  member_id=memberVO.getMember_id();
 		
 		String fixedSearchPeriod = dateMap.get("fixedSearchPeriod");
 		String beginDate=null,endDate=null;
@@ -128,7 +128,7 @@ public class MyPageControllerImpl extends BaseController  implements MyPageContr
 		String val[]=null;
 		HttpSession session=request.getSession();
 		memberVO=(MemberVO)session.getAttribute("memberInfo");
-		String  member_id=memberVO.getId();
+		String  member_id=memberVO.getMember_id();
 		if(attribute.equals("member_birth")){
 			val=value.split(",");
 			memberMap.put("member_birth_y",val[0]);
