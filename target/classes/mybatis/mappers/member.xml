@@ -1,63 +1,72 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper
-      PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="mapper.member">
-	<resultMap id="memResult" type="memberVO">
-		<result property="id" column="id" />
-        <result property="pwd" column="pwd" />
-        <result property="name" column="name" />
-		<result property="gender" column="gender" />
-        <result property="age" column="age" />
-        <result property="birthday" column="birthday" />        
-        <result property="phone" column="phone" />
-        <result property="regDate" column="regDate" />
-	</resultMap> 
-	<!-- 
-	<resultMap id="memResult" type="java.util.HashMap">
-      <result property="id" column="id" />
-      <result property="pwd" column="pwd" />
-      <result property="name" column="name" />
-      <result property="email" column="email" />
-      <result property="joinDate" column="joinDate" />
-   </resultMap> -->
+<!-- 리절트 맵 정의 -->	
+	<resultMap id="memberResult" type="MemberVO">
+		<result property="member_id" column="member_id" />
+		<result property="member_pw" column="member_pw" />
+		<result property="member_name" column="member_name" />
+		<result property="member_gender" column="member_gender" />
+		<result property="member_birth_y" column="member_birth_y" />
+		<result property="member_birth_m" column="member_birth_m" />
+		<result property="member_birth_d" column="member_birth_d" />
+		<result property="member_birth_gn" column="member_birth_gn" />
+		<result property="hp" column="hp" />
+		<result property="sms_yn" column="sms_yn" />
+		<result property="email" column="email" />
+		<result property="email_yn" column="email_yn" />
+		<result property="joinDate" column="joinDate" />
+		
+	</resultMap>	
 
-
-	<select id="selectAllMemberList" resultMap="memResult">
-      <![CDATA[
-         select * from member order by regDate desc	 	
-      ]]>
+	<select id="login" resultType="memberVO"  parameterType="java.util.Map"  >
+	    <![CDATA[
+			select * from shopping_member 
+			 where member_id=#{member_id}
+			 and member_pw=#{member_pw}			
+			 
+		]]>
 	</select>
-    
-     <insert id="insertMember"  parameterType="memberVO">
-		<![CDATA[
-		 insert into member(id,pwd, name, gender, age, birthday, phone)
-		 values(#{id}, #{pwd}, #{name}, #{gender}, #{age}, #{birthday}, #{phone})
-		]]>      
-	</insert>
 	
-   
-   <update id="updateMember"  parameterType="memberVO">
-     <![CDATA[
-	     update member
-	     set pwd=#{pwd}, name=#{name}, #{gender}, #{age}, #{birthday}, phone=#{phone}
-	     where
-	     id=#{id}
-      ]]>      
-   </update> 
-     
-   <delete id="deleteMember"  parameterType="String">
-	<![CDATA[
-	   delete from member
-	   where
-	   id=#{id}
-	]]>      
-  </delete>
-  <select id="loginById"  resultType="memberVO"   parameterType="memberVO" >
-	<![CDATA[
-		select * from member	
-		where id=#{id} and pwd=#{pwd}		
-	]]>
-  </select>
+	<select id="selectOverlappedID" parameterType="String" resultType="String">
+	   select decode(count(*),1, 'true', 0, 'false')
+	   from shopping_member
+	   where member_id = #{id}
+	</select>
+	
+  <insert id="insertNewMember"  parameterType="memberVO">
+  <![CDATA[
+    	insert into shopping_member(member_id,
+				 					 member_pw,
+                                     member_name,
+                                     member_gender,
+                                     member_birth_y,
+                                     member_birth_m,
+                                     member_birth_d,
+                                     member_birth_gn,
+                                     hp,
+                                     sms_yn,
+                                     email,
+                                     email_yn
+                                    )
+							 values(#{member_id},
+									#{member_pw},
+									#{member_name},
+                                 	#{member_gender},
+                                   	#{member_birth_y},
+                                   	#{member_birth_m},
+                                    #{member_birth_d},
+                                    #{member_birth_gn},
+                                    #{hp},
+                                    #{sms_yn},
+                                    #{email},
+                                    #{email_yn}
+                                  )
+                                  
+                                      
+   ]]>      
+  </insert>
 </mapper>

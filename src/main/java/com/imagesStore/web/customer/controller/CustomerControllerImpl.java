@@ -1,5 +1,6 @@
-package com.imagesStore.web.member.controller;
+package com.imagesStore.web.customer.controller;
 
+import java.sql.SQLException;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -19,60 +20,37 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.imagesStore.web.member.service.MemberService;
 import com.imagesStore.web.member.vo.MemberVO;
+import com.newlecture.web.service.NoticeService;
 
 
 
-@Controller("memberController")
-@RequestMapping("/member/")
+@Controller("customerController")
+@RequestMapping("/customer/notice")
 //@EnableAspectJAutoProxy
-public class MemberControllerImpl   implements MemberController {
-	
+public class CustomerControllerImpl   implements CustomerController {
+		
 	@Autowired
-	private MemberService memberService;
+	private CustomerService customerService;
 	@Autowired
-	private MemberVO memberVO ;
+	private CustomerVO customerVO ;
 
-	@RequestMapping("agree")
-	public String agree() {
 		
-		return "member.agree";
-	}
-	
-	@RequestMapping("login")
-	public String login() {
+		@RequestMapping("list")
+		public String  list(@RequestParam(value = "p", defaultValue = "1") Integer page) throws ClassNotFoundException, SQLException {
+			//String p =  request.getParameter("p");  //RequestParam을 사용하면 간단한 url 주소를 만들 수 있다. parameter와 실제 받는 변수명이 다른 경우에 사용
+			//defaultValue를 사용해 parameter 값이 null일 때 기본값을 설정할 수 있다.
+			
+			System.out.println("page:" + page);
+			
+			//List<Notice> list = noticeService.getList(1, "TITLE", "");
+			
+			return "notice.list";
+		}
 		
-		return "member.login";
-	}
-	
-	@RequestMapping("join")
-	public String join() {
-		
-		return "member.join";
-	}
-	
-	@RequestMapping("confirm")
-	public String confirm() {
-		
-		return "member.confirm";
-	}
-	
-	@RequestMapping("home")
-	public String home() {
-		
-		return "member.home";
-	}
-
-	@RequestMapping("find_id")
-	public String find_id() {
-		
-		return "member.find_id";
-	}
-
-	@RequestMapping("reissue")
-	public String reissue() {
-		
-		return "member.reissue";
-	}
+		@RequestMapping("detail")
+		public String detail() {
+			return "notice.detail";
+		}
 	
 	@Override
 	@RequestMapping(value="listMembers" ,method = RequestMethod.GET)

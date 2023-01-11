@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+      PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.customer">
+	<resultMap id="cusResult" type="customerVO">
+		<result property="id" column="id" />
+        <result property="title" column="title" />
+        <result property="writer_id" column="writer_id" />
+		<result property="content" column="content" />
+        <result property="regDate" column="regDate" />
+        <result property="hit" column="hit" />        
+        <result property="files" column="files" />
+        <result property="pub" column="pub" />
+	</resultMap> 
+	
+
+
+	<select id="getList" resultMap="cusResult" parameterType="customerVO">
+      <![CDATA[
+         SELECT * FROM NOTICE WHERE "+field+" LIKE ? AND NUM BETWEEN ? AND ?	 	
+      ]]>
+	</select>
+    
+     <select id="getCount" resultMap="cusResult" parameterType="customerVO">
+		<![CDATA[
+		SELECT COUNT(ID) COUNT FROM NOTICE
+		]]>      
+	</select>
+	
+   
+   <insert id="insert"  parameterType="customerVO">
+     <![CDATA[
+	     insert into member(id,title,writer_id,content,files)
+		 values(#{id}, #{title}, #{writer_id}, #{content}, #{files})
+      ]]>      
+   </insert> 
+     
+   <update id="update"  parameterType="String">
+	<![CDATA[
+	   UPDATE NOTICE 
+	   <set>
+			      <if test=" title!='' and title!=null">
+			        title=#{title},
+			      </if>
+			      <if test=" content!='' and content!=null">
+			         content=#{content},
+			      </if>
+			       <if test=" files!='' and files!=null">
+			         files=#{files},
+			      </if>
+	   WHERE id=#{id}   
+	]]>      
+  </update>
+  
+  <delete id="delete"  parameterType="customerVO" >
+	<![CDATA[
+		delete from notice
+	   where
+	   id=#{id}		
+	]]>
+  </delete>
+</mapper>
