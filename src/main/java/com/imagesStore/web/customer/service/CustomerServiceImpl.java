@@ -20,57 +20,32 @@ public class CustomerServiceImpl implements CustomerService {
 	@Autowired
 	private CustomerDAO customerDAO;
 
+
 	@Override
-	public List listMembers() throws DataAccessException {
+	public List<CustomerVO> getList(int page, String field, String query) throws ClassNotFoundException, SQLException {
 		List customersList = null;
 		customersList = customerDAO.selectAllMemberList();
 		return customersList;
 	}
 
-
-	@Override
-	public int addMember(MemberVO member) throws DataAccessException {
-		return memberDAO.insertMember(member);
-	}
-
-	@Override
-	public int removeMember(String id) throws DataAccessException {
-		return memberDAO.deleteMember(id);
-	}
-
-	@Override
-	public MemberVO login(MemberVO memberVO) throws Exception{
-		return memberDAO.loginById(memberVO);
-	}
-
-	@Override
-	public List<CustomerVO> getList(int page, String field, String query) throws ClassNotFoundException, SQLException {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 	@Override
 	public int getCount() throws ClassNotFoundException, SQLException {
-		// TODO Auto-generated method stub
-		return 0;
+		return customerDAO.getCount(id);
 	}
 
 	@Override
 	public int insert(CustomerVO customerVO) throws SQLException, ClassNotFoundException {
-		// TODO Auto-generated method stub
-		return 0;
+		return customerDAO.insert(id);
 	}
 
 	@Override
 	public int update(CustomerVO customerVO) throws SQLException, ClassNotFoundException {
-		// TODO Auto-generated method stub
-		return 0;
+		return customerDAO.update(id);
 	}
 
 	@Override
 	public int delete(int id) throws ClassNotFoundException, SQLException {
-		// TODO Auto-generated method stub
-		return 0;
+		return customerDAO.delete(id);
 	}
 
 

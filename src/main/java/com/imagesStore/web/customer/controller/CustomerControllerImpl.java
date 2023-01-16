@@ -51,6 +51,11 @@ public class CustomerControllerImpl   implements CustomerController {
 		public String detail() {
 			return "notice.detail";
 		}
+		
+		@RequestMapping("reg")
+		public String reg() {
+			return "notice.reg";
+		}
 	
 	@Override
 	@RequestMapping(value="listMembers" ,method = RequestMethod.GET)

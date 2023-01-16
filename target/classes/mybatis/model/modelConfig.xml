@@ -18,5 +18,7 @@
 			alias="orderVO" />
 		<typeAlias type="com.imagesStore.web.mypage.vo.MyPageVO"
 			alias="mypageVO" />
+		<typeAlias type="com.imagesStore.web.mypage.vo.CustomerVO"
+			alias="customerVO" />
 	</typeAliases>
 </configuration>
